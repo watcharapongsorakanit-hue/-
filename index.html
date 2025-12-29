@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>หนูขาาาา 🤍</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 350px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            animation: fadeIn 1.5s ease;
+        }
+
+        h1 {
+            color: #ff5e78;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 30px;
+            background: #ff5e78;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #ff2e55;
+            transform: scale(1.05);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .heart {
+            font-size: 40px;
+            animation: heartbeat 1.2s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <div class="heart">💗</div>
+    <h1>ขอโทษนะ...</h1>
+    <p>
+        เราขอโทษนะที่ชอบทำให้เสียจัยอะ
+   
+    </p>
+
+    <button onclick="showMessage()">กดตรงนี้หน่อยนะ</button>
+
+    <p id="message" class="hidden">
+       ต่อจาก นี้เรา   จะไม่ทำอีกเเล้วเราสัญญา
+       ร้ากกันนะ
+    </p>
+</div>
+
+<script>
+    function showMessage() {
+        document.getElementById("message").classList.remove("hidden");
+    }
+</script>
+
+</body>
+</html>
